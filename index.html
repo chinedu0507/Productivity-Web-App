@@ -3,23 +3,45 @@
 <html>
   <head>
     <title> Prod App</title>
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
     <div id="timerDiv">
-      <br>
       <button data-time="900" class="btn">Work for 15 mins</button>
       <button data-time="1800" class="btn">Work for 30 mins</button>
       <button data-time="300" class="btn">Break for 5 mins</button>
+      <button id="clear" class="btn"> Clear timer</button>
 
       <form name="form" id="form">
-        <input type="text" id="minutes" placeholder="Enter minutes">
+        <input type="text" id="minutes" placeholder="Enter minutes...">
       </form>
+    </div>
+
+    <!-- Display time -->
+    <div id="display">
       <span id="time"></span>
     </div>
 
+    <div id="activities">
+      <p id="act1" contenteditable="true">Edit Activity Name</p>
+      <p id="act2" contenteditable="true">Edit Activity Name</p>
+    </div>
 
+    <div id="rows">
+      <ul id="unordered">
+
+      </ul>
+    </div>
+
+    <button id="row">Add Row</button>
+
+    <footer id="footer">
+      <p>
+        Amata Media Copyright &copy; 2018
+      </p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
