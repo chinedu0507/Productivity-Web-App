@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url('./img/6.jpeg');
+  background-image: url('./img/1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -22,11 +22,11 @@ body{
   box-sizing: border-box;
 }
 
-.btn{
+.btn-main{
   margin: 0;
   padding: 0;
   font-size: 25px;
-  font-family: Helvetica;/* choose better font family */
+  font-family:'Coming Soon', Helvetica;/* choose better font family */
   /* how to text wrap */
   text-transform: uppercase;
   float: left;
@@ -53,6 +53,7 @@ input[type=text]{
   font-size: 25px;
   text-align: center;
   outline: none;
+  font-family:'Coming Soon', Helvetica;/* choose better font family */
 }
 
 #display{
@@ -60,7 +61,7 @@ input[type=text]{
 }
 
 #time{
-  font-family: Helvetica; /*choose better font*/
+  font-family: Quicksand, Helvetica;
   font-size: 140px;
   font-style: normal;
   margin-left: 40px;
@@ -73,6 +74,8 @@ input[type=text]{
   width: 60%;
   margin-bottom: 30px;
   margin: auto;
+  box-sizing: border-box;
+  position: relative;
 }
 
 #act1{
@@ -81,6 +84,9 @@ input[type=text]{
   text-align: center;
   font-family: Helvetica;
   font-size: 23px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  outline: none;
 }
 
 #act2{
@@ -89,19 +95,76 @@ input[type=text]{
   text-align: center;
   font-family: Helvetica;
   font-size: 23px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  outline: none;
 }
 
-#rows{
-  border: 1px red solid;
-  width: 60%;
-  height: 300px;
-  margin: auto;
-  box-sizing: border-box;
+.main-li{
+  list-style-type: none;
+  width: inherit;
+}
+
+.list1{
+  width: 47%;
+  height: 32px;
+  border: 1px orange solid;
+  text-align: center;
+  list-style: none;
+  padding-top: 19px;
+  margin: 0 auto;
+  float: left;
+  display: inline;
+  margin-right: -2px;
+  margin-top: 2px;
+}
+
+.checks{
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+}
+
+ .btn{
+  /* float: right; */
+  width: 3%;
+  /* height: 3%; */
+  text-align: center;
+  padding: 5px 5px;
+  /* margin: 10px 0px 10px 15px; */
+  margin: 0 auto;
+}
+
+.delete{
+  background-color: red;
+  margin-left: 2px;
+  border: none;
+  opacity: 0.8;
+}
+
+#row{
+  background: #000;
+  color: #f4f4f4;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  margin: 0 auto;
+  top: 85%;
+  left: 47%;
+}
+
+#clearFloat{
+  float: none;
 }
 
 #footer{
   text-align: center;
-  font-family: 'Courier New';
+  font-family: 'Quicksand', 'Courier New';
   color: #000;
   font-weight: bold;
   width: 100%;
@@ -109,4 +172,11 @@ input[type=text]{
   position: fixed;
   top: 92%;
   left: 0%;
+}
+
+@media(max-width:700px){
+  .timerDiv button{
+    display: block;
+    width: 80%;
+  }
 }

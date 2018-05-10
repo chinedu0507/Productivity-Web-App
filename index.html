@@ -5,14 +5,16 @@
     <title> Prod App</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Indie+Flower|Orbitron|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
   </head>
 
   <body>
     <div id="timerDiv">
-      <button data-time="900" class="btn">Work for 15 mins</button>
-      <button data-time="1800" class="btn">Work for 30 mins</button>
-      <button data-time="300" class="btn">Break for 5 mins</button>
-      <button id="clear" class="btn"> Clear timer</button>
+      <button data-time="900" class="btn-main">Work for 15 mins</button>
+      <button data-time="1800" class="btn-main">Work for 30 mins</button>
+      <button data-time="300" class="btn-main">Break for 5 mins</button>
+      <button id="clear" class="btn-main"> Clear timer</button>
 
       <form name="form" id="form">
         <input type="text" id="minutes" placeholder="Enter minutes...">
@@ -24,17 +26,21 @@
       <span id="time"></span>
     </div>
 
+    <!-- Activities div -->
     <div id="activities">
       <p id="act1" contenteditable="true">Edit Activity Name</p>
       <p id="act2" contenteditable="true">Edit Activity Name</p>
-    </div>
 
-    <div id="rows">
-      <ul id="unordered">
+      <!-- Main unordered list -->
+      <ul id="main-ul">
 
       </ul>
     </div>
 
+    <!-- Clear float -->
+    <div id="clearFloat"></div>
+
+    <br><br><br><br>
     <button id="row">Add Row</button>
 
     <footer id="footer">
