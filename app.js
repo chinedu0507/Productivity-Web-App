@@ -157,22 +157,14 @@ function RowToAdd(){
     // Append main li to the main ul
     mainUL.appendChild(li_main);
 
+    // Increment row counter variable
+    rowCounter++;
 
-
-  // relate the rowCounter variable when the delete button is clicked
-
-  // Increment row counter variable
-  rowCounter++;
-
-  if(rowCounter != 5){
-    addRow.style.visibility = 'visible';
-  }
-  else{
+  if(rowCounter > 4){
     // alert and hide button
     alert('You can only create 5 rows');
     addRow.style.visibility = 'hidden';
   }
-
 }
 
 // Function to lighten the background when a checkbox is ticked
@@ -195,6 +187,7 @@ function deleteRow(e){
   // Removing li from main ul
   mainUL.removeChild(li); // li is a child of the main ul
 
+  // Decrement row counter variable
   rowCounter--;
 
   // Make add row button visible

@@ -1,9 +1,10 @@
 *{
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 
 body{
+  overflow: hidden;
   background-image: url('./img/1.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -34,10 +35,14 @@ body{
   display: inline;
   width: 20%;
   height: 79px;
-  border: 1px solid #45814c;
+  border: 1px solid #3e3a5d;
+  border-radius: 3px;
   color: #f4f4f4;
-  background-color: #76c77f;
   background: transparent;
+}
+
+.btn-main:hover{
+  background: #3e3a5d;
 }
 
 #form{
@@ -49,7 +54,7 @@ input[type=text]{
   padding: 0;
   height: 75px;
   float: left;
-  width: 19.7%;
+  width: 18.7%;
   font-size: 25px;
   text-align: center;
   outline: none;
@@ -67,7 +72,6 @@ input[type=text]{
   margin-left: 40px;
   margin-right: 40px;
   color: #f4f4f4;
-  /* background: transparent; */
 }
 
 #activities{
@@ -80,13 +84,17 @@ input[type=text]{
 
 #act1{
   float: left;
-  width: 50%;
+  width: 47%;
   text-align: center;
   font-family: Helvetica;
   font-size: 23px;
   color: #f4f4f4;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   outline: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #3e3a5d;
+  border-right: 1px solid #3e3a5d;
+  padding-bottom: 3px;
 }
 
 #act2{
@@ -96,8 +104,12 @@ input[type=text]{
   font-family: Helvetica;
   font-size: 23px;
   color: #f4f4f4;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   outline: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #3e3a5d;
+  border-left: 1px solid #3e3a5d;
+  padding-bottom: 3px;
 }
 
 .main-li{
@@ -108,7 +120,7 @@ input[type=text]{
 .list1{
   width: 47%;
   height: 32px;
-  border: 1px orange solid;
+  border: 1px #3e3a5d solid;
   text-align: center;
   list-style: none;
   padding-top: 19px;
@@ -116,7 +128,6 @@ input[type=text]{
   float: left;
   display: inline;
   margin-right: -2px;
-  margin-top: 2px;
 }
 
 .checks{
@@ -128,18 +139,16 @@ input[type=text]{
 }
 
  .btn{
-  /* float: right; */
   width: 3%;
-  /* height: 3%; */
+  vertical-align: middle;
   text-align: center;
   padding: 5px 5px;
-  /* margin: 10px 0px 10px 15px; */
-  margin: 0 auto;
+  margin: 15px 0px 15px 15px;
 }
 
 .delete{
   background-color: red;
-  margin-left: 2px;
+  margin-left: 15px;
   border: none;
   opacity: 0.8;
 }
@@ -158,6 +167,10 @@ input[type=text]{
   left: 47%;
 }
 
+#row:hover{
+  background: #3e3a5d;
+}
+
 #clearFloat{
   float: none;
 }
@@ -174,9 +187,214 @@ input[type=text]{
   left: 0%;
 }
 
-@media(max-width:700px){
-  .timerDiv button{
-    display: block;
+@media(max-width:960px){
+  
+  .btn-main{
+    float: none;
+    height: 40px;
+    text-align: center;
+    width: 40%;
+    font-size: 20px;
+  }
+
+  input[type=text]{
+    float: none;
+    height: 35px;
+    text-align: center;
     width: 80%;
+    font-size: 20px;
+  }
+
+  #time{
+    font-family: Quicksand, Helvetica;
+    font-size: 47px;
+    font-style: normal;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #f4f4f4;
+  }
+
+  #timerDiv{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    padding: -70px 0px 0px 0px;
+    box-sizing: border-box;
+  }
+
+  #activities{
+    margin-top: -27px;
+  }
+
+  #act1{
+    float: left;
+    width: 47%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 17px;
+    color: #f4f4f4;
+    margin-bottom: 3px;
+    outline: none;
+  }
+
+  #act2{
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 17px;
+    color: #f4f4f4;
+    margin-bottom: 3px;
+    outline: none;
+  }
+
+  .list1{
+    width: 47%;
+    height: 13px;
+    border: 1px #3e3a5d solid;
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+    float: left;
+    display: inline;
+    margin-right: -2px;
+  }
+
+  .checks{
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    height: 13px;
+    width: 13px;
+    margin-top: -25px;
+  }
+
+  .btn{
+   width: 4.2%;
+   vertical-align: middle;
+   text-align: center;
+   padding: 4px 5px 4px 3px;
+   margin: 9px 0px 5px 13px;
+ }
+
+  .delete{
+    background-color: red;
+    margin-left: 7px;
+    border: none;
+    opacity: 0.8;
+  }
+
+  #row{
+    padding: 8px;
+    font-size: 14px;
+    position: absolute;
+    margin: 0 auto;
+    top: 87%;
+    left: 43%;
+  }
+}
+
+@media(max-width:700px){
+
+  .btn-main{
+    float: none;
+    height: 40px;
+    text-align: center;
+    width: 40%;
+    font-size: 14px;
+    padding: 4px 0;
+    display: inline;
+    margin: 0;
+ }
+
+  input[type=text]{
+    float: none;
+    height: 35px;
+    text-align: center;
+    width: 80%;
+    font-size: 16px;
+  }
+
+  #time{
+    font-family: Quicksand, Helvetica;
+    font-size: 48px;
+    font-style: normal;
+    margin-top: -20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #f4f4f4;
+  }
+
+  #activities{
+    width: 90%;
+  }
+
+  #act1{
+    float: left;
+    width: 46%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+    outline: none;
+  }
+
+  #act2{
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+    outline: none;
+  }
+
+  .list1{
+    width: 45%;
+    height: 1px;
+    border: 1px #3e3a5d solid;
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+    float: left;
+    display: inline;
+    margin-right: -2px;
+  }
+
+  .checks{
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    height: 12px;
+    width: 12px;
+    margin-top: -35px;
+  }
+
+  .btn{
+   width: 7%;
+   height: 20px;
+   vertical-align: middle;
+   text-align: center;
+   padding: 4px 6px 4px 3px;
+   margin: 3px 0px 3px 13px;
+ }
+
+  .delete{
+    background-color: red;
+    margin-left: 5px;
+    margin-bottom: -1px;
+    border: none;
+    opacity: 0.8;
+  }
+
+  #row{
+    padding: 7px;
+    font-size: 13px;
+    position: absolute;
+    margin: 0 auto;
+    top: 88%;
+    left: 40%;
   }
 }
