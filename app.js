@@ -3,7 +3,9 @@ const showTime = document.querySelector('#time');
 const buttons = document.querySelectorAll('[data-time]');
 const clearScreen = document.querySelector('#clear');
 const addRow = document.querySelector('#row');
-const mainUL = document.querySelector('#main-ul')
+const mainUL = document.querySelector('#main-ul');
+const acti1 = document.querySelector('#act1');
+const acti2 = document.querySelector('#act2');
 
 // Variables
 let countInterval;
@@ -31,7 +33,7 @@ function timer(seconds){
     clearInterval(countInterval); // need to assign setInterval to a variable in order to use the clearInterval function
 
     // Change title back to its default
-    document.title = 'ProdApp';
+    document.title = 'Productivity App';
     return;
   }
   // Display Time
@@ -75,7 +77,7 @@ function clearTime(){
   showTime.textContent = '';
 
   // Change title back to its default
-  document.title = 'ProdApp';
+  document.title = 'Productivity App';
 }
 
 // Clear button event listener
@@ -193,4 +195,13 @@ function deleteRow(e){
   // Make add row button visible
   addRow.style.visibility = 'visible';
   }
+}
+
+// Edit Activity Name event listeners
+acti1.addEventListener('click', clearInput);
+acti2.addEventListener('click', clearInput);
+
+// Function to clear 'Edit Activity Name' when clicked
+function clearInput(){
+  this.innerHTML = '';
 }

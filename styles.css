@@ -13,6 +13,7 @@ body{
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
+  box-sizing: border-box;
 }
 
 #timerDiv{
@@ -27,8 +28,7 @@ body{
   margin: 0;
   padding: 0;
   font-size: 25px;
-  font-family:'Coming Soon', Helvetica;/* choose better font family */
-  /* how to text wrap */
+  font-family:'Quicksand', Helvetica;
   text-transform: uppercase;
   float: left;
   overflow: hidden;
@@ -58,7 +58,7 @@ input[type=text]{
   font-size: 25px;
   text-align: center;
   outline: none;
-  font-family:'Coming Soon', Helvetica;/* choose better font family */
+  font-family:'Quicksand', Helvetica;
 }
 
 #display{
@@ -66,7 +66,7 @@ input[type=text]{
 }
 
 #time{
-  font-family: Quicksand, Helvetica;
+  font-family: 'Quicksand', Helvetica;
   font-size: 140px;
   font-style: normal;
   margin-left: 40px;
@@ -86,7 +86,7 @@ input[type=text]{
   float: left;
   width: 47%;
   text-align: center;
-  font-family: Helvetica;
+  font-family: 'Quicksand', Helvetica;
   font-size: 23px;
   color: #f4f4f4;
   margin-bottom: 5px;
@@ -101,7 +101,7 @@ input[type=text]{
   float: left;
   width: 50%;
   text-align: center;
-  font-family: Helvetica;
+  font-family: Quicksand, Helvetica;
   font-size: 23px;
   color: #f4f4f4;
   margin-bottom: 5px;
@@ -164,7 +164,7 @@ input[type=text]{
   position: absolute;
   margin: 0 auto;
   top: 85%;
-  left: 47%;
+  left: 46%;
 }
 
 #row:hover{
@@ -296,6 +296,17 @@ input[type=text]{
 
 @media(max-width:700px){
 
+  body{
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    -o-background-size: cover;
+   -moz-background-size: cover;
+    -webkit-background-size: cover;
+  }
+
   .btn-main{
     float: none;
     height: 40px;
@@ -316,7 +327,7 @@ input[type=text]{
   }
 
   #time{
-    font-family: Quicksand, Helvetica;
+    font-family: 'Quicksand', Helvetica;
     font-size: 48px;
     font-style: normal;
     margin-top: -20px;
