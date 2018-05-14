@@ -16,6 +16,22 @@ body{
   box-sizing: border-box;
 }
 
+/* Chrome, Safari, Opera, Firefox */
+::placeholder{
+  color: #f4f4f4;
+  opacity: 1;
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder{
+  color: #f4f4f4;
+}
+
+/* Internet Explorer */
+:-ms-input-placeholder{
+  color: #f4f4f4;
+}
+
 #timerDiv{
   padding: 0;
   width: 100%;
@@ -85,6 +101,7 @@ input[type=text]{
 #act1{
   float: left;
   width: 47%;
+  height: 40px;
   text-align: center;
   font-family: 'Quicksand', Helvetica;
   font-size: 23px;
@@ -94,14 +111,19 @@ input[type=text]{
   box-sizing: border-box;
   border-bottom: 1px solid #3e3a5d;
   border-right: 1px solid #3e3a5d;
-  padding-bottom: 3px;
+  border-top: none;
+  border-left: none;
+  padding-bottom: -20px;
+  background: transparent;
+  /* padding: 0; */
 }
 
 #act2{
   float: left;
   width: 50%;
+  height: 40px;
   text-align: center;
-  font-family: Quicksand, Helvetica;
+  font-family: 'Quicksand', Helvetica;
   font-size: 23px;
   color: #f4f4f4;
   margin-bottom: 5px;
@@ -109,7 +131,10 @@ input[type=text]{
   box-sizing: border-box;
   border-bottom: 1px solid #3e3a5d;
   border-left: 1px solid #3e3a5d;
+  border-top: none;
+  border-right: none;
   padding-bottom: 3px;
+  background: transparent;
 }
 
 .main-li{
@@ -188,7 +213,7 @@ input[type=text]{
 }
 
 @media(max-width:960px){
-  
+
   .btn-main{
     float: none;
     height: 40px;

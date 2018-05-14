@@ -4,8 +4,8 @@ const buttons = document.querySelectorAll('[data-time]');
 const clearScreen = document.querySelector('#clear');
 const addRow = document.querySelector('#row');
 const mainUL = document.querySelector('#main-ul');
-const acti1 = document.querySelector('#act1');
-const acti2 = document.querySelector('#act2');
+// const acti1 = document.querySelector('#act1');
+// const acti2 = document.querySelector('#act2');
 
 // Variables
 let countInterval;
@@ -198,10 +198,10 @@ function deleteRow(e){
 }
 
 // Edit Activity Name event listeners
-acti1.addEventListener('click', clearInput);
-acti2.addEventListener('click', clearInput);
-
-// Function to clear 'Edit Activity Name' when clicked
-function clearInput(){
-  this.innerHTML = '';
-}
+// acti1.addEventListener('click', clearInput);
+// acti2.addEventListener('click', clearInput);
+//
+// // Function to clear 'Edit Activity Name' when clicked
+// function clearInput(){
+//   this.innerHTML = '';
+// }
