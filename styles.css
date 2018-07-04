@@ -1,5 +1,4 @@
 *{
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -9,6 +8,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -79,6 +79,38 @@ input[type=text]{
 
 #display{
   text-align: center;
+}
+
+#stopTimer{
+  background: #3e3a5d;
+  border-radius: 3px;
+  border: 1px solid #3e3a5d;
+  color: #f4f4f4;
+  font-size: 25px;
+  font-family:'Quicksand', Helvetica;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+#resumeTimer{
+  background: #3e3a5d;
+  border-radius: 3px;
+  border: 1px solid #3e3a5d;
+  color: #f4f4f4;
+  font-size: 25px;
+  font-family:'Quicksand', Helvetica;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+#stopTimer:hover{
+  background: transparent;
+}
+
+#resumeTimer:hover{
+  background: transparent;
 }
 
 #time{
@@ -230,6 +262,20 @@ input[type=text]{
     font-size: 20px;
   }
 
+  #display{
+    padding: 15px 0px;
+  }
+  
+  #stopTimer{
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+
+  #resumeTimer{
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+
   #time{
     font-family: Quicksand, Helvetica;
     font-size: 47px;
@@ -351,13 +397,27 @@ input[type=text]{
     font-size: 16px;
   }
 
+  #display{
+    padding: 10px 0px;
+  }
+
+  #stopTimer{
+    font-size: 14px;
+    padding: 5px 5px;
+    margin-left: 3px;
+  }
+
+  #resumeTimer{
+    font-size: 14px;
+    padding: 5px 5px;
+    margin-right: 5px;
+  }
+
   #time{
     font-family: 'Quicksand', Helvetica;
-    font-size: 48px;
+    font-size: 43px;
     font-style: normal;
-    margin-top: -20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-top:-40px;
     color: #f4f4f4;
   }
 

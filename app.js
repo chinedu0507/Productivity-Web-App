@@ -4,12 +4,14 @@ const buttons = document.querySelectorAll('[data-time]');
 const clearScreen = document.querySelector('#clear');
 const addRow = document.querySelector('#row');
 const mainUL = document.querySelector('#main-ul');
-// const acti1 = document.querySelector('#act1');
-// const acti2 = document.querySelector('#act2');
+const stopT = document.querySelector("#stopTimer")
+const resumeT = document.querySelector("#resumeTimer")
 
 // Variables
 let countInterval;
 let rowCounter = 0;
+let secondsLeft;
+const audio = new Audio('beep-04.wav'); 
 
 // Functions
 function timer(seconds){
@@ -22,14 +24,22 @@ function timer(seconds){
   // When timer supposed to end
   const end = now + seconds*1000;
 
+  // Display both stop and resume buttons
+  stopT.style.visibility = 'visible';
+  resumeT.style.visibility = 'visible';
+
   // Display time before countdown begins
   displayTime(seconds);
 
   countInterval = setInterval(() => {
-  const secondsLeft = Math.round((end - Date.now())/1000);
+  secondsLeft = Math.round((end - Date.now())/1000);
 
   // Check to stop interval
   if(secondsLeft < 0){
+
+    // Audio to signify timer has ended
+    audio.play();
+
     clearInterval(countInterval); // need to assign setInterval to a variable in order to use the clearInterval function
 
     // Change title back to its default
@@ -40,6 +50,8 @@ function timer(seconds){
   displayTime(secondsLeft);
 
   }, 1000);
+
+  stoppedTime = countInterval;
 }
 
 // Display time function
@@ -64,6 +76,7 @@ function startTimer(){
 
   // Convert time datasets to integers
   const seconds = parseInt(this.dataset.time);
+  
   timer(seconds);
 }
 
@@ -75,6 +88,10 @@ function clearTime(){
 
   // Display nothing in the timer div
   showTime.textContent = '';
+
+  // Make both stop and resume buttons invisible
+  stopT.style.visibility = 'hidden';
+  resumeT.style.visibility = 'hidden';
 
   // Change title back to its default
   document.title = 'Productivity App';
@@ -100,6 +117,22 @@ document.form.addEventListener('submit', function(e){
   // Clear input form
   this.reset();
 });
+
+// Event listeners for stop and resume buttons
+stopT.addEventListener('click', stop);
+resumeT.addEventListener('click', resume);
+
+// Stop Timer function
+function stop(){
+
+  clearInterval(countInterval);
+}
+
+// Resume Time function
+function resume() {
+
+  timer(secondsLeft);
+}
 
 // Add row event listener
 addRow.addEventListener('click', RowToAdd);
@@ -197,11 +230,5 @@ function deleteRow(e){
   }
 }
 
-// Edit Activity Name event listeners
-// acti1.addEventListener('click', clearInput);
-// acti2.addEventListener('click', clearInput);
-//
-// // Function to clear 'Edit Activity Name' when clicked
-// function clearInput(){
-//   this.innerHTML = '';
-// }
+
+

@@ -4,6 +4,8 @@ This is a responsive frontend web application influenced by the Pomodoro techniq
 
 The top part of the web application contains four buttons: 3 of which are used to countdown from a specific time (in minutes) and the fourth button is used to clear the timer. In addition, there is an input field where the user can enter the number of minutes to countdown from.
 
+'Stop' and 'Resume' buttons are made visible once the timer is started and made hidden once the 'clear timer' button is clicked. A beep sound is made to indicate to the user that the timer is done.
+
 Below the row of buttons and before the row that contains the fields "Edit Activity Name", is where the countdown timer will be displayed when the user clicks or enters the number of minutes to be counted down.
 
 The user can edit the default "Edit Activity Name" field by simply clicking on any of the letters to the activity he/she wants to track. The "Add Row" button below adds a row containing two items, one for each activity. Each item contains a checkbox which when checked, changes the background of the parent element of that item. This is used to signify that the particular activity slot has been completed when the corresponding timer has elapsed.
