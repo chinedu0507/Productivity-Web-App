@@ -10,43 +10,44 @@
   </head>
 
   <body>
-    <div id="timerDiv">
+    <header class="timerDiv">
       <button data-time="900" class="btn-main">Work for 15 mins</button>
       <button data-time="1800" class="btn-main">Work for 30 mins</button>
       <button data-time="300" class="btn-main">Break for 5 mins</button>
-      <button id="clear" class="btn-main"> Clear timer</button>
+      <button class="btn-main"> Clear timer</button>
 
-      <form name="form" id="form">
-        <input type="text" id="minutes" placeholder="Enter minutes...">
+      <form name="form" class="form">
+        <input type="number" min="1" max="60" id="minutes"
+        placeholder="Enter minutes...">
       </form>
-    </div>
+    </header>
 
     <!-- Display time -->
-    <div id="display">
-      <button id="stopTimer">Stop</button>
-      <span id="time"></span>
-      <button id="resumeTimer">Resume</button>
+    <div class="display">
+      <button class="Timer" id="stopTimer">Stop</button>
+      <span class="time"></span>
+      <button class="Timer" id="resumeTimer">Resume</button>
       <!-- <button id="resumeTimer" style="visibility: hidden">Resume</button> -->
     </div>
 
     <!-- Activities div -->
-    <div id="activities">
+    <div class="activities">
       <input type="text" id="act1" placeholder="Edit Activity Name">
       <input type="text" id="act2" placeholder="Edit Activity Name">
       <!-- Main unordered list -->
-      <ul id="main-ul">
+      <ul class="main-ul">
 
       </ul>
     </div>
 
     <!-- Clear float -->
-    <div id="clearFloat"></div>
+    <div class="clearFloat"></div>
 
     <br><br><br><br>
-    <button id="row">Add Row</button>
+    <button class="row">Add Row</button>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer">
       <p>
         Amata Media Copyright &copy; 2018
       </p>
