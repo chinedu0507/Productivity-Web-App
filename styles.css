@@ -1,5 +1,6 @@
 *{
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -13,7 +14,7 @@ body{
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
-  box-sizing: border-box;
+  font-family:'Quicksand', Helvetica;
 }
 
 /* Chrome, Safari, Opera, Firefox */
@@ -32,23 +33,19 @@ body{
   color: #f4f4f4;
 }
 
-#timerDiv{
-  padding: 0;
+.timerDiv{
   width: 100%;
   margin: auto;
   text-align: center;
-  box-sizing: border-box;
+  display: inline;
 }
 
 .btn-main{
   margin: 0;
-  padding: 0;
   font-size: 25px;
-  font-family:'Quicksand', Helvetica;
   text-transform: uppercase;
   float: left;
   overflow: hidden;
-  display: inline;
   width: 20%;
   height: 79px;
   border: 1px solid #3e3a5d;
@@ -61,112 +58,80 @@ body{
   background: #3e3a5d;
 }
 
-#form{
-  display: inline;
-}
 
-input[type=text]{
+.form input[type=text],.form input[type=number]{
   margin: 0;
-  padding: 0;
-  height: 75px;
+  height: 79px;
   float: left;
   width: 18.7%;
   font-size: 25px;
   text-align: center;
   outline: none;
-  font-family:'Quicksand', Helvetica;
 }
 
-#display{
+.display{
   text-align: center;
+  color: #f4f4f4;
 }
 
-#stopTimer{
+
+.Timer{
   background: #3e3a5d;
   border-radius: 3px;
   border: 1px solid #3e3a5d;
-  color: #f4f4f4;
   font-size: 25px;
-  font-family:'Quicksand', Helvetica;
   padding: 10px 10px;
   text-transform: uppercase;
   visibility: hidden;
+  font-size: 20px;
+  padding: 5px 5px;
 }
 
-#resumeTimer{
-  background: #3e3a5d;
-  border-radius: 3px;
-  border: 1px solid #3e3a5d;
-  color: #f4f4f4;
-  font-size: 25px;
-  font-family:'Quicksand', Helvetica;
-  padding: 10px 10px;
-  text-transform: uppercase;
-  visibility: hidden;
-}
-
-#stopTimer:hover{
+.Timer:hover{
   background: transparent;
 }
 
-#resumeTimer:hover{
-  background: transparent;
-}
 
-#time{
-  font-family: 'Quicksand', Helvetica;
+.time{
   font-size: 140px;
   font-style: normal;
   margin-left: 40px;
   margin-right: 40px;
-  color: #f4f4f4;
 }
 
-#activities{
+.activities{
   width: 60%;
   margin-bottom: 30px;
   margin: auto;
-  box-sizing: border-box;
   position: relative;
 }
 
-#act1{
+.activities input[type=text]{
   float: left;
-  width: 47%;
   height: 40px;
   text-align: center;
-  font-family: 'Quicksand', Helvetica;
   font-size: 23px;
   color: #f4f4f4;
   margin-bottom: 5px;
-  outline: none;
-  box-sizing: border-box;
   border-bottom: 1px solid #3e3a5d;
+  outline: none;
+  background: transparent;
+}
+
+#act1{
+  width: 47%;
   border-right: 1px solid #3e3a5d;
   border-top: none;
   border-left: none;
   padding-bottom: -20px;
-  background: transparent;
-  /* padding: 0; */
 }
 
 #act2{
-  float: left;
   width: 50%;
-  height: 40px;
-  text-align: center;
-  font-family: 'Quicksand', Helvetica;
-  font-size: 23px;
-  color: #f4f4f4;
-  margin-bottom: 5px;
-  outline: none;
-  box-sizing: border-box;
-  border-bottom: 1px solid #3e3a5d;
   border-left: 1px solid #3e3a5d;
   border-top: none;
   border-right: none;
   padding-bottom: 3px;
-  background: transparent;
 }
 
 .main-li{
@@ -210,7 +175,7 @@ input[type=text]{
   opacity: 0.8;
 }
 
-#row{
+.row{
   background: #000;
   color: #f4f4f4;
   border: 0;
@@ -224,15 +189,16 @@ input[type=text]{
   left: 46%;
 }
 
-#row:hover{
+.row:hover{
   background: #3e3a5d;
 }
 
-#clearFloat{
+.clearFloat{
   float: none;
+  margin-bottom: 50px;
 }
 
-#footer{
+.footer{
   text-align: center;
   font-family: 'Quicksand', 'Courier New';
   color: #000;
@@ -244,7 +210,15 @@ input[type=text]{
   left: 0%;
 }
 
-@media(max-width:960px){
+@media (max-width:960px){
+
+  .timerDiv{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 120px;
+    padding: -70px 0px 0px 0px;
+  }
 
   .btn-main{
     float: none;
@@ -254,69 +228,37 @@ input[type=text]{
     font-size: 20px;
   }
 
-  input[type=text]{
+  .form input[type=text],.form input[type=number]{
     float: none;
     height: 35px;
-    text-align: center;
     width: 80%;
     font-size: 20px;
   }
 
-  #display{
+  .display{
     padding: 15px 0px;
   }
-  
-  #stopTimer{
-    font-size: 20px;
-    padding: 5px 5px;
-  }
 
-  #resumeTimer{
-    font-size: 20px;
-    padding: 5px 5px;
-  }
-
-  #time{
-    font-family: Quicksand, Helvetica;
+  .time{
     font-size: 47px;
-    font-style: normal;
-    margin-left: 40px;
-    margin-right: 40px;
-    color: #f4f4f4;
   }
 
-  #timerDiv{
-    width: 100%;
-    height: 120px;
-    text-align: center;
-    padding: -70px 0px 0px 0px;
-    box-sizing: border-box;
-  }
-
-  #activities{
+  .activities{
     margin-top: -27px;
   }
 
-  #act1{
-    float: left;
-    width: 47%;
-    text-align: center;
-    font-family: Helvetica;
+  .activities input[type=text]{
     font-size: 17px;
-    color: #f4f4f4;
+    font-family: Helvetica;
     margin-bottom: 3px;
-    outline: none;
+  }
+
+  #act1{
+    width: 47%;
   }
 
   #act2{
-    float: left;
     width: 50%;
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 17px;
-    color: #f4f4f4;
-    margin-bottom: 3px;
-    outline: none;
   }
 
   .list1{
@@ -355,7 +297,7 @@ input[type=text]{
     opacity: 0.8;
   }
 
-  #row{
+  .row{
     padding: 8px;
     font-size: 14px;
     position: absolute;
@@ -365,17 +307,16 @@ input[type=text]{
   }
 }
 
-@media(max-width:700px){
+@media (max-width:700px){
 
   body{
-    background-size: cover;
-    background-position: center;
     background-repeat: repeat;
-    -ms-background-size: cover;
-    background-attachment: fixed;
-    -o-background-size: cover;
-   -moz-background-size: cover;
-    -webkit-background-size: cover;
+  }
+
+  .timerDiv{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .btn-main{
@@ -386,65 +327,51 @@ input[type=text]{
     font-size: 14px;
     padding: 4px 0;
     display: inline;
-    margin: 0;
- }
+  }
 
-  input[type=text]{
+
+
+  .form input[type=text],.form input[type=number]{
     float: none;
     height: 35px;
-    text-align: center;
     width: 80%;
     font-size: 16px;
   }
 
-  #display{
+  .display{
     padding: 10px 0px;
   }
 
-  #stopTimer{
+  .Timer{
     font-size: 14px;
     padding: 5px 5px;
     margin-left: 3px;
   }
 
-  #resumeTimer{
-    font-size: 14px;
-    padding: 5px 5px;
-    margin-right: 5px;
-  }
-
-  #time{
-    font-family: 'Quicksand', Helvetica;
+  .time{
     font-size: 43px;
     font-style: normal;
     margin-top:-40px;
-    color: #f4f4f4;
   }
 
-  #activities{
+  .activities{
     width: 90%;
   }
 
-  #act1{
-    float: left;
-    width: 46%;
-    text-align: center;
+  .activities input[type=text]{
     font-family: Helvetica;
     font-size: 14px;
-    color: #f4f4f4;
     margin-bottom: 10px;
-    outline: none;
+  }
+
+  #act1{
+    width: 46%;
+    color: #f4f4f4;
   }
 
   #act2{
-    float: left;
     width: 50%;
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 14px;
     color: #f4f4f4;
-    margin-bottom: 10px;
-    outline: none;
   }
 
   .list1{
@@ -485,7 +412,7 @@ input[type=text]{
     opacity: 0.8;
   }
 
-  #row{
+  .row{
     padding: 7px;
     font-size: 13px;
     position: absolute;

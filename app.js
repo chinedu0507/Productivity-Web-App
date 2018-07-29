@@ -1,9 +1,9 @@
 // DOM Elements
-const showTime = document.querySelector('#time');
+const showTime = document.querySelector('.time');
 const buttons = document.querySelectorAll('[data-time]');
-const clearScreen = document.querySelector('#clear');
-const addRow = document.querySelector('#row');
-const mainUL = document.querySelector('#main-ul');
+const clearScreen = document.querySelector('#clear'); //is this clearFloat?
+const addRow = document.querySelector('.row');
+const mainUL = document.querySelector('.main-ul');
 const stopT = document.querySelector("#stopTimer")
 const resumeT = document.querySelector("#resumeTimer")
 
@@ -11,7 +11,7 @@ const resumeT = document.querySelector("#resumeTimer")
 let countInterval;
 let rowCounter = 0;
 let secondsLeft;
-const audio = new Audio('beep-04.wav'); 
+const audio = new Audio('beep-04.wav');
 
 // Functions
 function timer(seconds){
@@ -76,7 +76,7 @@ function startTimer(){
 
   // Convert time datasets to integers
   const seconds = parseInt(this.dataset.time);
-  
+
   timer(seconds);
 }
 
@@ -229,6 +229,3 @@ function deleteRow(e){
   addRow.style.visibility = 'visible';
   }
 }
-
-
-
